@@ -1,1 +1,3 @@
-# amazon_sagemaker_r_workload_end_2_end_pipeline
+# amazon_sagemaker_r_samples
+
+The code is mainly for reference purpose. Pull requests are more than welcome. 
