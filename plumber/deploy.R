@@ -1,15 +1,11 @@
-library(xgboost)
 library(plumber)
-library(jsonlite)
 
-# load a pretrained xgboost model
-bst <- xgb.load("xgb.model")
-
-# create a closure around our xgboost model and input data processing
+# the inference function 
 inference <- function(x){
-  ds <- xgb.DMatrix(data = x )
-  output <- predict(bst, ds)
-  list(output=output)
+  print(paste('input:', x))
+  output <- runif(n=1,min=0,max=10)
+  print(paste('output:', output))
+  output
 }
 
 app <- plumb('endpoints.R')

@@ -10,10 +10,11 @@ function() {
 #' @param req The http request sent
 #' @post /invocations
 function(req) {
-
+#     print(req$postBody)
     # Read in data
-    input_json <- fromJSON(req$postBody)
-    output <- inference(input_json$features)
+    input <- req$postBody
+#     print(input)
+    output <- inference(input)
     # Return prediction
     return(output)
 

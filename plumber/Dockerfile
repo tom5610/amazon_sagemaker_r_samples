@@ -1,4 +1,4 @@
-FROM r-base:3.6.3
+FROM r-base:4.1.1
 
 MAINTAINER Amazon SageMaker Examples <amazon-sagemaker-examples@amazon.com>
 
